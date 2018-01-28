@@ -25,7 +25,7 @@
 
 ### Что такое углы?
 
-Углы - это слова вот такого вида
+Углы - это слова вот такого вида:
 
 <pre>
 М Н О Г О Х О Д О В О Ч К А
@@ -47,9 +47,9 @@
 # Как это запустить?
 
 - <code>git clone https://github.com/atthealchemist/square_word_bot_vk.git</code>
-- <code>cd square_word_bot_vk</code>
-- <code>pip install vk_api</code>
-- <code>python word_bot_vk.py "VK_LOGIN" "VK_PASSWORD" "user/chat" "USER_ID/CHAT_ID"</code>
+- <code>cd <i>square_word_bot_vk</i></code>
+- <code>pip install <i>vk_api</i></code>
+- <code>python <i>word_bot_vk.py</i> "VK_LOGIN" "VK_PASSWORD" "user/chat" "USER_ID/CHAT_ID"</code>
 
 # Что планируется добавить ещё:
 - углы
