@@ -43,3 +43,15 @@
 К
 А
 </pre>
+
+# Как это запустить?
+
+- <code>git clone https://github.com/atthealchemist/square_word_bot_vk.git</code>
+- <code>cd square_word_bot_vk</code>
+- <code>pip install vk_api</code>
+- <code>python word_bot_vk.py "VK_LOGIN" "VK_PASSWORD" "user/chat" "USER_ID/CHAT_ID"</code>
+
+## Что планируется запилить:
+- углы
+- обращения
+- многопоточность, дабы было возможно постить квадраты во все существующие сессии пользователя.
