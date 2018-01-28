@@ -15,7 +15,7 @@ if(send_type == "user"):
     print("Bot is started (for user \"{0}\" (id: {1})) !".format(username, get_id))
 else:
     values = {'out': 0,'count': 1,'time_offset': 60, 'peer_id': 2000000000 + int(get_id)}
-    chat = vk.method('messages.getChat', {'chat_id': get_id})[0]
+    chat = vk.method('messages.getChat', {'chat_id': get_id})
     chat_title = chat['title']
     print("Bot is started (for chat \"{0}\" (chat_id: {1}))!".format(chat_title, get_id))
 
