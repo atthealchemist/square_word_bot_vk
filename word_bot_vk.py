@@ -1,7 +1,7 @@
 import sys
 import time
 import vk_api
-from word import make_square_word
+from word import make_square_word, make_corner_word
 
 vk = vk_api.VkApi(login = sys.argv[1], password = sys.argv[2])
 vk.auth()
@@ -43,6 +43,20 @@ while True:
                         vk.method('messages.send', {'peer_id': get_id, 'message': make_square_word(w)})
                     else:
                         vk.method('messages.send', {'peer_id': 2000000000 + int(get_id), 'message': make_square_word(w)})
+            elif("сделай угол " in word):
+                word = word.split(' ')
+                w = word[-1]
+                if(send_type == "user"):
+                    vk.method('messages.send', {'peer_id': get_id, 'message': make_corner_word(w)})
+                else:
+                    vk.method('messages.send', {'peer_id': 2000000000 + int(get_id), 'message': make_corner_word(w)})
+            elif("сделай углы" in word):
+                words = word.split(" ")
+                for w in words[2:len(words)]:
+                    if(send_type == "user"):
+                        vk.method('messages.send', {'peer_id': get_id, 'message': make_corner_word(w)})
+                    else:
+                        vk.method('messages.send', {'peer_id': 2000000000 + int(get_id), 'message': make_corner_word(w)})
             else:
                 pass
     time.sleep(3)
