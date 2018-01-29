@@ -38,7 +38,8 @@ while True:
             elif("сделай квадраты" in word):
                 # print("Making more than 1 square")
                 words = word.split(" ")
-                for w in words[2:len(words)]:
+                cmd_end_index = words.index("квадраты") + 1
+                for w in words[cmd_end_index:len(words)]:
                     if(send_type == "user"):
                         vk.method('messages.send', {'peer_id': get_id, 'message': make_square_word(w)})
                     else:
@@ -52,7 +53,8 @@ while True:
                     vk.method('messages.send', {'peer_id': 2000000000 + int(get_id), 'message': make_corner_word(w)})
             elif("сделай углы" in word):
                 words = word.split(" ")
-                for w in words[2:len(words)]:
+                cmd_end_index = words.index("углы") + 1
+                for w in words[cmd_end_index:len(words)]:
                     if(send_type == "user"):
                         vk.method('messages.send', {'peer_id': get_id, 'message': make_corner_word(w)})
                     else:
