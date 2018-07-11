@@ -44,6 +44,18 @@
 А
 </pre>
 
+### Что такое вертикали
+
+Вертикали - слова такого вида:
+<pre>
+Р О К К
+Е Б О Л
+М У П Ю
+О В И Ч
+Н И Я Е
+Т     Й
+</pre>
+
 # Как это запустить?
 
 - <code>git clone https://github.com/atthealchemist/square_word_bot_vk.git</code>
