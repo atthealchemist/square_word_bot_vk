@@ -1,41 +1,41 @@
-def make_square_word(word):
-    square_word = ""
+def MakeSquare(word):
+    squareWord = ""
     if word != "":
         word = list(word)
-        current_index = 0
-        while current_index < len(word):
-            for row_index, letter in enumerate(word):
+        currentIndex = 0
+        while currentIndex < len(word):
+            for rowIndex, letter in enumerate(word):
                 # print(word[row_index], end=" ")
-                square_word += (word[row_index] + " ")
-            first = word.pop(0)
-            word.append(first)
+                squareWord += (word[rowIndex] + " ")
+            firstLetter = word.pop(0)
+            word.append(firstLetter)
             # print("")
-            square_word += "\n"
-            current_index += 1
+            squareWord += "\n"
+            currentIndex += 1
     # print("")
-    square_word += "\n"
+    squareWord += "\n"
 
-    return square_word
+    return squareWord
 
-def make_corner_word(word):
-    corner_word = ""
+def MakeCorner(word):
+    cornerWord = ""
     if word != "":
         word = list(word)
-        for row_index, letter in enumerate(word):
-            if(row_index < len(word)):
-                corner_word += (word[row_index] + " ")
-        corner_word += "\n"
+        for rowIndex, letter in enumerate(word):
+            if(rowIndex < len(word)):
+                cornerWord += (word[rowIndex] + " ")
+        cornerWord += "\n"
         word.pop(0)
-        for row_index, letter in enumerate(word):
-            corner_word += (word[row_index] + "\n")
+        for rowIndex, letter in enumerate(word):
+            cornerWord += (word[rowIndex] + "\n")
 
-    return corner_word
+    return cornerWord
 
-def get_greatest_word_len(words):
-    raw_words = words.split(' ')
+def __getGreatestWordLength(words):
+    rawWords = words.split(' ')
     prev = 0
     new = 0
-    for word in raw_words:
+    for word in rawWords:
         if len(word) > new:
             prev = new
             new = len(word)
@@ -44,26 +44,26 @@ def get_greatest_word_len(words):
     return new
 
 
-def make_vertical_words(words):
-    raw_words = words.split(' ')
-    vertical_words = []
-    vertical_word = ""
-    greatest_word_len = get_greatest_word_len(words)
-    position_in_array = 0
-    while len(vertical_words) < greatest_word_len:
-        for raw_word in raw_words:
+def MakeVerticals(words):
+    rawWords = words.split(' ')
+    verticalWords = []
+    verticalWord = ""
+    greatestWordLength = __getGreatestWordLength(words)
+    positionInArray = 0
+    while len(verticalWords) < greatestWordLength:
+        for rawWord in rawWords:
             try:
-                for letter_index, letter in enumerate(raw_word[position_in_array]):
-                    vertical_word += raw_word[position_in_array] + " "
+                for letter_index, letter in enumerate(rawWord[positionInArray]):
+                    verticalWord += rawWord[positionInArray] + " "
             except Exception:
                 space = " "
-                vertical_word += space + " "
+                verticalWord += space + " "
                 continue
-        vertical_words.append(vertical_word)
-        if position_in_array < greatest_word_len - 1:
-            position_in_array += 1
-        vertical_word = ""
-    return vertical_words
+        verticalWords.append(verticalWord)
+        if positionInArray < greatestWordLength - 1:
+            positionInArray += 1
+        verticalWord = ""
+    return verticalWords
 
 # if __name__ == '__main__':
 #     for word in make_vertical_words("тюльпашки для ромашки"):
