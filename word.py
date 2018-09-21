@@ -65,7 +65,7 @@ def MakeVerticals(words):
         verticalWord = ""
     return verticalWords
 
-# if __name__ == '__main__':
-#     for word in make_vertical_words("тюльпашки для ромашки"):
-#         print(word + "\n")
-    #print(make_vertical_words("ремонт обуви_ копир_ ключей"))
+if __name__ == '__main__':
+    for word in MakeVerticals("тюльпашки для ромашки"):
+        print(word + "\n")
+    print(MakeVerticals("ремонт обуви копир ключей"))
