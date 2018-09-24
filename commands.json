@@ -1,0 +1,26 @@
+[
+  {
+    "type": "command",
+    "command": "square",
+    "name": {
+      "single": ["квадрат", "square"],
+      "multiple": ["квадраты", "squares"]
+    }
+  },
+  {
+    "type": "command",
+    "command": "corner",
+    "name": {
+      "single": ["угол", "corner"],
+      "multiple": ["углы", "corners"]
+    }
+  },
+  {
+    "type": "command",
+    "command": "verticals",
+    "name": {
+      "single": [],
+      "multiple": ["verticals", "вертикали", "вертикаль"]
+    }
+  }
+]
